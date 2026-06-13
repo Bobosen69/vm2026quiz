@@ -6,7 +6,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="quiz-box">
+
+  <div id="loginBox" class="quiz-box">
+    <img src="sverige.png" width="120" alt="Sveriges flagga">
+    <h1>VM 2026 Quiz</h1>
+
+    <p>Ange lösenord för att starta quizet:</p>
+
+    <input type="password" id="passwordInput" placeholder="Lösenord">
+
+    <button onclick="checkPassword()">Lås upp quiz</button>
+
+    <p id="error"></p>
+  </div>
+
+  <main id="quizContent" class="quiz-box" style="display: none;">
     <img src="sverige.png" width="120" alt="Sveriges flagga">
     <h1>VM 2026 Quiz</h1>
 
@@ -27,6 +41,7 @@
       <button id="restartBtn" style="display: none;">Spela igen</button>
     </div>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
