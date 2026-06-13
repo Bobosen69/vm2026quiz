@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>VM 2026 Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="quiz-box">
+    <img src="sverige.png" width="120" alt="Sveriges flagga">
+    <h1>VM 2026 Quiz</h1>
+
+    <div id="startBox">
+      <p>Skriv ditt namn innan du startar quizet.</p>
+      <input id="playerName" type="text" placeholder="Ditt namn">
+      <button id="startBtn">Starta quiz</button>
+    </div>
+
+    <div id="quizBox" style="display: none;">
+      <p id="progress"></p>
+      <img id="questionImage" class="question-image" style="display: none;">
+      <audio id="questionAudio" controls style="display: none;"></audio>
+      <p id="question">Frågan visas här</p>
+      <div id="answers"></div>
+      <p id="feedback"></p>
+      <p id="score"></p>
+      <button id="restartBtn" style="display: none;">Spela igen</button>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
