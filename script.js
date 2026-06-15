@@ -1,4 +1,4 @@
-const quizOpenTime = new Date("2025-01-01T00:00:00+02:00").getTime();
+const quizOpenTime = new Date("2026-06-20T16:00:00+02:00").getTime();
 
 setInterval(() => {
   const now = new Date().getTime();
