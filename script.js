@@ -22,8 +22,13 @@ function checkPassword() {
   const password = document.getElementById("passwordInput").value;
 
   if (password === "sverige2026") {
+
+    const fanfare = document.getElementById("fanfareSound");
+    fanfare.play();
+
     document.getElementById("loginBox").style.display = "none";
     document.getElementById("quizContent").style.display = "block";
+
   } else {
     document.getElementById("error").textContent = "Fel lösenord!";
   }
