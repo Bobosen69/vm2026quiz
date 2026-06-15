@@ -97,36 +97,12 @@ input {
 }
 
 .waving-flag {
-  width: 140px;
+  width: 220px;
   display: block;
   margin: 0 auto;
-  transform-origin: left center;
-  animation: realisticFlag 3s ease-in-out infinite;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.25));
+  filter:
+    drop-shadow(0 0 10px rgba(255,255,0,0.6))
+    drop-shadow(0 0 20px rgba(255,255,255,0.5));
 }
 
-@keyframes realisticFlag {
-  0% {
-    transform: perspective(500px) rotateY(0deg) skewY(0deg);
-  }
 
-  20% {
-    transform: perspective(500px) rotateY(8deg) skewY(1deg);
-  }
-
-  40% {
-    transform: perspective(500px) rotateY(-6deg) skewY(-1deg);
-  }
-
-  60% {
-    transform: perspective(500px) rotateY(10deg) skewY(1deg);
-  }
-
-  80% {
-    transform: perspective(500px) rotateY(-4deg) skewY(-1deg);
-  }
-
-  100% {
-    transform: perspective(500px) rotateY(0deg) skewY(0deg);
-  }
-}
