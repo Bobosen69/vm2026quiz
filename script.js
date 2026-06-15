@@ -5,10 +5,9 @@ setInterval(() => {
   const distance = quizOpenTime - now;
 
   if (distance <= 0) {
-  document.getElementById("countdownBox").style.display = "none";
-  document.getElementById("passwordArea").style.display = "block";
-  return;
-}
+    document.getElementById("countdownBox").style.display = "none";
+    document.getElementById("passwordArea").style.display = "block";
+    return;
   }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -16,8 +15,8 @@ setInterval(() => {
   const minutes = Math.floor((distance / (1000 * 60)) % 60);
   const seconds = Math.floor((distance / 1000) % 60);
 
-  document.getElementById("countdown").textContent =
-    `${days} dagar ${hours} timmar ${minutes} minuter ${seconds} sekunder`;
+  document.getElementById("countdown").innerHTML =
+    `${days} dagar<br>${hours} timmar<br>${minutes} minuter<br>${seconds} sekunder`;
 }, 1000);
 function checkPassword() {
   const password = document.getElementById("passwordInput").value;
