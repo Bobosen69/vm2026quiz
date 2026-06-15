@@ -92,3 +92,16 @@ input {
   margin: 20px auto;
   display: block;
 }
+.waving-flag {
+  width: 120px;
+  animation: wave 3s ease-in-out infinite;
+  transform-origin: left center;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(4deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
