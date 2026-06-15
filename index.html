@@ -16,13 +16,15 @@
   <h2>Quizet öppnar om</h2>
   <p id="countdown"></p>
 </div>
-    <p>Ange lösenord för att starta quizet:</p>
+    <div id="passwordArea" style="display: none;">
+  <p>Ange lösenord för att starta quizet:</p>
 
-    <input type="password" id="passwordInput" placeholder="Lösenord">
+  <input type="password" id="passwordInput" placeholder="Lösenord">
 
-    <button onclick="checkPassword()">Lås upp quiz</button>
+  <button onclick="checkPassword()">Lås upp quiz</button>
 
-    <p id="error"></p>
+  <p id="error"></p>
+</div>
   </div>
 
   <main id="quizContent" class="quiz-box" style="display: none;">
