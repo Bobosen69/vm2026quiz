@@ -104,5 +104,36 @@ input {
     drop-shadow(0 0 10px rgba(255,255,0,0.6))
     drop-shadow(0 0 20px rgba(255,255,255,0.5));
 }
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    padding-top: 80px;
+  }
 
+  .quiz-box {
+    width: 82%;
+    padding: 22px;
+  }
+
+  .waving-flag {
+    width: 180px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  #countdownBox h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  #countdown {
+    display: block;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #000;
+    font-weight: bold;
+  }
+}
 
