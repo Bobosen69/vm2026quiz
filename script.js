@@ -5,8 +5,10 @@ setInterval(() => {
   const distance = quizOpenTime - now;
 
   if (distance <= 0) {
-    document.getElementById("countdown").textContent = "Quizet är nu öppet!";
-    return;
+  document.getElementById("countdownBox").style.display = "none";
+  document.getElementById("passwordArea").style.display = "block";
+  return;
+}
   }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
