@@ -1,3 +1,22 @@
+const quizOpenTime = new Date("2026-06-20T16:00:00+02:00").getTime();
+
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = quizOpenTime - now;
+
+  if (distance <= 0) {
+    document.getElementById("countdown").textContent = "Quizet är nu öppet!";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / (1000 * 60)) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
+
+  document.getElementById("countdown").textContent =
+    `${days} dagar ${hours} timmar ${minutes} minuter ${seconds} sekunder`;
+}, 1000);
 function checkPassword() {
   const password = document.getElementById("passwordInput").value;
 
