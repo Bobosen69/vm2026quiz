@@ -230,10 +230,10 @@ function showResult() {
   questionEl.textContent = "";
 
   answersEl.innerHTML = `
-    <img src="vm-pokal.png" class="thank-you-image" alt="VM-pokal">
-    <h2>Tack för din medverkan!</h2>
-    <p>Resultatet har registrerats.</p>
-  `;
+  <img src="vm-pokal.png" class="thank-you-image" alt="VM-pokal">
+  <h2>Tack ${playerName} för din medverkan!</h2>
+  <p>Resultatet har registrerats.</p>
+`;
 
   feedbackEl.textContent = "";
   scoreEl.textContent = "";
