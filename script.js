@@ -18,13 +18,37 @@ setInterval(() => {
   document.getElementById("countdown").innerHTML =
     `${days} dagar<br>${hours} timmar<br>${minutes} minuter<br>${seconds} sekunder`;
 }, 1000);
-function checkPassword() {
+
+     function checkPassword() {
   const password = document.getElementById("passwordInput").value;
 
   if (password === "sverige2026") {
 
     const fanfare = document.getElementById("fanfareSound");
     fanfare.play();
+
+    const duration = 4000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 4,
+        angle: 60,
+        spread: 80,
+        origin: { x: 0 }
+      });
+
+      confetti({
+        particleCount: 4,
+        angle: 120,
+        spread: 80,
+        origin: { x: 1 }
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
 
     document.getElementById("loginBox").style.display = "none";
     document.getElementById("quizContent").style.display = "block";
