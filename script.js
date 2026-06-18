@@ -223,6 +223,10 @@ function nextQuestion() {
 }
 
 function showResult() {
+  const anthem = document.getElementById("nationalAnthem");
+  anthem.currentTime = 0;
+  anthem.play();
+  
   progressEl.textContent = "";
   questionImage.style.display = "none";
   questionAudio.pause();
