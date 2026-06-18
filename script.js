@@ -237,7 +237,7 @@ function showResult() {
 
   feedbackEl.textContent = "";
   scoreEl.textContent = "";
-  restartBtn.style.display = "inline-block";
+  restartBtn.style.display = "none";
 
   sendResultByEmail();
 }
