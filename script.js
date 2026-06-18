@@ -221,11 +221,15 @@ function nextQuestion() {
     else showResult();
   }, 900);
 }
-
 function showResult() {
-  const anthem = document.getElementById("nationalAnthem");
+const anthem = document.getElementById("nationalAnthem");
+
+if (anthem) {
   anthem.currentTime = 0;
-  anthem.play();
+  anthem.play().catch(() => {
+    console.log("Nationalsången kunde inte spelas automatiskt.");
+  });
+}
   
   progressEl.textContent = "";
   questionImage.style.display = "none";
